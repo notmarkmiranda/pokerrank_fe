@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-
-import NavigationBar from './NavigationBar/components/NavigationBar'
+import React, { Component } from 'react'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <NavigationBar />
+        { process.env.REACT_APP_API_SERVER }
       </div>
     );
   }

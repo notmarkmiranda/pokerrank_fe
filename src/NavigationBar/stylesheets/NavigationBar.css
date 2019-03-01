@@ -1,10 +1,9 @@
-div.container > span.navbar-brand {
+div.container > a.navbar-brand {
   color: black;
   text-transform: uppercase;
-
 }
 
-div.container > span.navbar-brand > span {
+div.container > a.navbar-brand > span {
   color: goldenrod;
   font-weight: bold
 }
