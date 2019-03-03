@@ -27,3 +27,10 @@
   color: #333;
   text-decoration: none;
 }
+
+div.card-header.league-name {
+  font-size: 18px;
+  font-weight:100;
+  text-transform: uppercase;
+}
+ 
