@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import '../../Common/stylesheets/index.css'
 import { getPublicLeagues } from '../actions/index'
@@ -12,15 +13,19 @@ export class PublicLeagues extends Component {
   renderLeagues = (leagues) => {
     return leagues.map((league) => {
       return (
-        <li className="list-group-item public-league" key={ league.id }>
-          { league.location }
+        <Link to={ `/leagues/${ league.id }` } className="list-group-item public-league" key={ league.id }>
+          <div className="caption-text text-warning">
+            { league.location }
+          </div>
           <span className="stat-line">
             { league.name }
           </span>
           <div className="caption-text text-info">
-            # of Games: { league.games_count } | Average Players per Game: { league.average_players_per_game } | Average Pot: { league.average_pot_size }
+            # of Games: { league.games_count } |
+            Average Players per Game: { league.average_players_per_game } |
+            Average Pot: { league.average_pot_size }
           </div>
-        </li>
+        </Link>
       )
     })
   }

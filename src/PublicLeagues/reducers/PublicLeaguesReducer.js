@@ -5,7 +5,7 @@ const initialState = []
 function publicLeagues(state = initialState, action){
   switch(action.type) {
     case ADD_LEAGUES:
-      return [...state, ...action.payload]
+      return [...action.payload]
     default:
       return state
   }
